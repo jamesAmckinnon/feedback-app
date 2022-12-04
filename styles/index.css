@@ -1,0 +1,443 @@
+@tailwind base;
+
+/* Write your own custom base styles here */
+
+/* Start purging... */
+@tailwind components;
+/* Stop purging. */
+
+/* Write your own custom component styles here */
+.btn-blue {
+  @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+}
+
+html, body, #root, #__next {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  color: #1f1f1fff;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: 0 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.signInWrapper{
+  width: 100%;
+  height: 100vh !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  position: absolute;
+}
+
+.signInTile{
+  width: 90%;
+  max-width: 540px;
+  text-align: center;
+  
+}
+
+.page-container{
+  height: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.mainContent {
+  height: 100%;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+
+.mainContent::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapper {
+  background: white;
+  height: 100vh;
+  box-shadow: 0 0 3px rgba(black, 0.33);
+
+  display: grid;
+  grid-template-columns: minmax(10px, 240px) minmax(10px, 100%);
+  grid-template-rows: min-content 1fr;
+}
+
+
+.small-container{
+  max-width: 650px;
+  width: 100%;
+  border-left: 2px dashed #35d4f4ff;
+  border-right: 2px dashed #35d4f4ff;
+  padding-bottom: 85px;
+}
+.contentCont {
+  max-width: 700px;
+  width: 95%;
+}
+
+.upcomingCont {
+  width: 100%;
+  max-width: 700px;
+}
+
+.select1 {
+  width: 220px;
+}
+
+.childCont{
+  overflow-y: hidden;
+}
+
+.courseSelectCont{
+  border-bottom: 1px solid #e9e9e9ff;
+}
+
+.courseSelectCont:hover{
+  background-color: #f6f6f6ff;
+  padding-left: 10px;
+  font-weight: 400;
+  color: #585858ff;
+}
+
+.courseSelectCont:hover .classArrow {
+  color: darkgray;
+}
+
+.semesterSelectCont{
+  border-bottom: 1px solid #e9e9e9ff;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.semesterSelectCont:hover{
+  background-color: #f6f6f6ff;
+  padding-left: 10px;
+  font-weight: 400;
+  color: #585858ff;
+}
+
+.semesterSelectCont:hover .classArrow {
+  color: darkgray;
+}
+
+.calendarCont{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  height: auto;
+}
+
+.schedule-cols{
+  margin: 20px;
+}
+
+.calendar_inputs {
+  width: 140px;
+}
+
+.dueDates {
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+}
+
+.dueDateCont{
+  max-width: 700px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.dot {
+  height: 13px;
+  width: 13px;
+  margin-right: 9px;
+  background-color: #00c3f4ff;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.select {
+  width: auto;
+  max-width: 250px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 32px;
+  border-radius: 5px;
+  vertical-align: middle;
+  color:#4a4a4aff;
+  border: 1px solid #dadce0;
+  appearance:none;
+  background: url(../public/arrow.svg)  no-repeat 95% center;
+  background-size: 14px 8px;
+}
+
+
+.select2 {
+  min-width: 90px;
+  width: auto;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 10px;
+  padding-right: 35px;
+  border-radius: 5px;
+  vertical-align: middle;
+  color:#4a4a4aff;
+  border: 1px solid #dadce0;
+  appearance:none;
+  background: url(../public/arrow.svg)  no-repeat 87% center;
+  background-size: 14px 8px;
+}
+
+.selectTime {
+  width: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  vertical-align: middle;
+  color:#4a4a4aff;
+  border: 1px solid #dadce0;
+  background:white;
+}
+
+.selectDate {
+  width: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  vertical-align: middle;
+  color:#4a4a4aff;
+  border: 1px solid #dadce0;
+  background:white;
+}
+
+.contentCont {
+  width: 100%;
+}
+
+input {
+  padding: 3px 0px 0px 3px;
+  letter-spacing: .2px;
+  border-top: 0px;
+  border-bottom: 1px solid #dadce0;
+  border-left: 0px;
+  border-right: 0px;
+  border-radius: 0px;
+}
+
+textarea:focus {
+  outline: none !important;
+}
+
+/* Works on Firefox */
+textarea {
+  scrollbar-width: thin;
+  scrollbar-color: grey white;
+}
+
+/* Works on Chrome, Edge, and Safari */
+textarea::-webkit-scrollbar {
+  width: 12px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background: none;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: lightgrey;
+  border-radius: 20px;
+  border: 3px solid white;
+}
+
+textarea {
+  padding: 5px;
+  min-height: 230px;
+  height: fit-content;
+}
+
+.calendar {
+  max-width: 700px;
+}
+
+.class {
+  min-width: 159px;
+}
+
+/* .topBar {
+  position: fixed;
+} */
+
+@media (max-width: 1115px) {
+  .schedule-times{
+    font-size: .8em;
+  }
+
+  .schedule-cols{
+    margin: 12px 10px;
+  }
+
+  .class {
+    min-width: 115px;
+  }
+}
+
+
+@media (max-width: 870px) {
+
+  html, body, #root, #__next {
+    height: auto;
+    width: auto;
+    position: static;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+  }
+  
+  html::-webkit-scrollbar {
+    display: none;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  #root::-webkit-scrollbar {
+    display: none;
+  }
+
+  #__next::-webkit-scrollbar {
+    display: none;
+  }
+
+  .addDashboard{
+    justify-content: space-between;
+  }
+
+  .childCont{
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .childCont::-webkit-scrollbar {
+    display: none;
+  }
+
+  .page-container{
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .page-container::-webkit-scrollbar {
+    display: none;
+  }
+  .small-container{
+    max-width: 650px;
+    width: 100%;
+    border: none;
+    margin-top: 25px;
+    padding-bottom: 0px;
+  }
+
+  .wrapper{
+    grid-template-columns: 100%;
+    grid-template-rows: min-content 1fr;
+  }
+
+  .scheduleCont{
+    margin-top: 20px !important;
+  }
+  
+  .sideBar {
+    display: none;
+  }
+
+  .mainContent {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .dueDateCont{
+    margin-bottom: 0px;
+  }
+}
+
+@media (max-width: 630px) {
+
+  body {
+    -webkit-overflow-scrolling: auto;
+  }
+
+  .dateGrid {
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+  }
+}
+
+
+@media (hover: none) {
+  .courseSelectCont:hover{
+    background-color: white;
+    padding-left: 0px;
+    font-weight: 400;
+    color: inherit;
+  }
+
+  .courseSelectCont:hover .classArrow {
+    color: #d0d0d0ff;
+  }
+
+  .semesterSelectCont:hover {
+    border-bottom: 1px solid #e9e9e9ff;
+    font-size: 16px;
+    padding-left: 0px;
+    line-height: 1.5;
+    background-color: white;
+    color: inherit;
+  }
+
+  .semesterSelectCont:hover .classArrow {
+    color: #d0d0d0ff;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .select1 {
+    width: 180px;
+  }
+}
+
+/* Start purging... */
+@tailwind utilities;
+/* Stop purging. */
+
+/* Your own custom utilities */
