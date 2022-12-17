@@ -46,8 +46,18 @@ export function useFeedback( request_id ){
   }
 }
 
-export function useGrowthAreas( user_id ){
-  const {data, error} = useSWR(`/api/get-growth-areas?user_id=${user_id}`, fetcher)
+export function useGrowthAreas( user_id, userEmail ){
+  const {data, error} = useSWR(`/api/get-growth-areas?user_id=${user_id}&userEmail=${userEmail}`, fetcher)
+
+  return {
+    growth_areas: data,
+    isLoading: !error && !data,
+    isError: error,
+  }
+}
+
+export function useGrowthAreasProfile( userEmail ){
+  const {data, error} = useSWR(`/api/get-growth-areas-profile?userEmail=${userEmail}`, fetcher)
 
   return {
     growth_areas: data,

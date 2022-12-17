@@ -15,7 +15,7 @@ class MyDocument extends Document {
                 property="og:image"
                 content="https://prodigy-feedback-app.herokuapp.com/logo.png"
             />
-            <title>Student Dashboard</title>
+            <title>Feedback App</title>
             <meta 
                 name="title"
                 property="og:title"

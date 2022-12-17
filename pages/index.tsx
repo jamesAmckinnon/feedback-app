@@ -5,6 +5,8 @@ import { useRouter, Router } from 'next/router'
 //git push -u heroku <branch>
 //git push -u origin <branch >
 
+// export NODE_OPTIONS=--openssl-legacy-provider
+
 function Page({ ctx }) {
   const router = useRouter()
     // Make sure we're in the browser

@@ -6,12 +6,10 @@ const handler: NextApiHandler = async (req, res) => {
 
   try {
     const results = await query(`
-      SELECT todo_item, todo_id, complete
-      FROM todo
-      WHERE user_id = ? `,
-      user_id
-      )
-    return res.json(results)
+        SELECT todo_item, todo_id, complete
+        FROM todo
+        WHERE user_id = ? `, user_id)
+      return res.json(results)
   } catch (e) {
     res.status(500).json({ message: e.message })
   }

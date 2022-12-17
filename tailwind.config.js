@@ -10,13 +10,15 @@ module.exports = {
         'accent-1': '#333',
         'customBlue': '#00c3f4ff',
         'customYellow': '#f9e900ff',
-        'customBlue2': '#0981f2ff',
+        'customBlue2': '#767575',
         'customGreen': '#32a854ff',
         'customGrey': '#d0d0d0ff',
-        'customGrey2': '#7e7e7eff',
+        'customGrey2': '#616060',
         'customGrey3': '#292929ff',
         'customGrey4' : '#f8f9faff',
         'customGrey5' : '#edeff2ff',
+        'customGrey6' : '#c1bebe',
+        'customGrey7' : '#4a4848',
         'selectGrey': '#ddddddff',
         'customRed': '#ff0000ff',
         'bgBlue': '#c9f3ffff',
@@ -53,7 +55,8 @@ module.exports = {
         '5px':'5px',
         '12px': '12px',
         '16px': '16px',
-        '54px': '54px'
+        '54px': '54px',
+        '4.5rem': '4.5rem',
       },
       borderWidth: {
         '9px': '9px'

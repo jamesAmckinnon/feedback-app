@@ -22,6 +22,11 @@ function Profile() {
           <MainHeader/>
           <div className="p-6">
             <ProfileImage/>
+            <div className="w-full text-2xl pt-4 flex text-customGrey6 font-semibold justify-center">
+                {name.name[0].first_name}
+                {' '}
+                {name.name[0].last_name}
+            </div>
             <Feedback first_name = {name.name[0].first_name} last_name = {name.name[0].last_name} />
             <AreasForGrowth/>
           </div>

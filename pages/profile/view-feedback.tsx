@@ -13,7 +13,6 @@ function ViewFeedback( { router: { query } } ) {
     
   
     if(feedback && object){
-        console.log(feedback, "here");
         return (
             <div className="pt-4 px-6">
                 <Link href={'/profile/home'}>
@@ -21,10 +20,10 @@ function ViewFeedback( { router: { query } } ) {
                         Back
                     </h3>
                 </Link>
-                <h3>{object.request_title}</h3>
+                <h1 className="text-2xl pt-8 mb text-prodigyOrange font-semibold">{object.request_title}</h1>
                 {feedback.map((f) => (
                     <>
-                        <h3 className="text-xl py-5px text-customGrey3 cursor-pointer">
+                        <h3 className="text-xl pt-4 text-customGrey3">
                             {f.first_name}
                             {' '}
                             {f.last_name}

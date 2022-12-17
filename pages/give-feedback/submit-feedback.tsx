@@ -13,45 +13,49 @@ function SubmitFeedback( { router: { query } } ) {
     const userName = useName(userEmail);
     const [feedback_submission, setFeedbackSubmission] = useState('');
     const [submitted, setSubmitted] = useState(false);
-  
-    console.log(userName);
+    const receiveEmail = object.user_id;
 
     if(object){
+        console.log(receiveEmail)
+        object
         return(
-            <>
-                <Link href={'/give-feedback/select-user'}>
-                    <h3 className="text-xl py-5px text-customGrey3 cursor-pointer" >
+            <div className="py-4">
+                <Link href={{pathname: '/give-feedback/user', query: {user_id: JSON.stringify(receiveEmail)}}}>
+                    <h3 className="text-xl py-5px px-6 text-customGrey3 cursor-pointer" >
                         Back
                     </h3>
                 </Link>
                 {!submitted &&
-                    <div className="pt-4 px-6">
-                        <h3>{object.request_title}</h3>
-                        <h3>{object.request_note}</h3>
-                        <div className="w-full h-full  items-center">
-                            <div className="flex flex-col" >
+                    <div className="pt-8 px-6">
+                        <h1 className="text-xl text-prodigyOrange font-semibold">Request</h1>
+                        <h3 className="text-customGrey7">{object.request_title}</h3>
+                        <h1 className="pt-2 text-prodigyOrange font-bold">Details</h1>
+                        <h3 className="text-customGrey7">{object.request_note}</h3>
+                        <div className="w-full h-full pt-12 items-center">
+                            <div className="flex w-full flex-col" >
                                 <textarea  
                                     id="feedback_submission" 
-                                    className="border-b border-black w-full" 
-                                    placeholder="Feedback Submission"
+                                    className="border-2 border-customGrey6 rounded-md w-full"
                                     maxLength={150} 
                                     name="feedback_submission"
                                     value={feedback_submission}
                                     onChange={ (e) => {setFeedbackSubmission(e.target.value)}}
                                 />
-                                <button onClick={submitHandler}>
-                                    Submit
-                                </button>
+                                <div className="w-full flex pt-4 text-prodigyOrange font-bold justify-start">
+                                    <button onClick={submitHandler}>
+                                        Submit
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 } 
                 {submitted &&
-                    <div>
+                    <div className="text-2xl px-6 pt-8 mb text-prodigyOrange font-semibold">
                         Thank you for your feedback!
                     </div>
                 }
-        </>
+        </div>
         )
     } else {
         return (
@@ -75,6 +79,7 @@ function SubmitFeedback( { router: { query } } ) {
                 body: JSON.stringify({
                     request_id,
                     userEmail,
+                    receiveEmail,
                     feedback_submission,
                     first_name,
                     last_name,

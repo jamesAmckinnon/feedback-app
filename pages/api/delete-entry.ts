@@ -10,13 +10,11 @@ const handler: NextApiHandler = async (req, res) => {
     if (typeof parseInt(id.toString()) !== 'number') {
       return res.status(400).json({ message: '`id` must be a number' })
     }
-    const results = await query(
-      `
-      DELETE FROM entries
+    const results = await query(`
+      DELETE
+      FROM entries
       WHERE id = ?
-  `,
-      id
-    )
+    `, id)
     res.json(results)
   } catch (e) {
     res.status(500).json({ message: e.message })

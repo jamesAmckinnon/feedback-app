@@ -13,13 +13,10 @@ const handler: NextApiHandler = async (req, res) => {
         .json({ message: '`semester_id` and `course_name` are both required' })
     }
 
-    const results = await query(
-      `
+    const results = await query(`
       INSERT INTO course (semester_id, course_name, course_code)
       VALUES (?, ?, ?)
-      `,
-      [semester_id, course_name, course_code]
-    )
+    `, [semester_id, course_name, course_code])
 
     return res.json(results)
   } catch (e) {

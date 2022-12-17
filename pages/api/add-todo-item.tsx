@@ -5,13 +5,11 @@ const handler: NextApiHandler = async (req, res) => {
   const { u_id, item } = req.body
 
   try {
-    const results = await query(
-      `
-      INSERT INTO todo (user_id, todo_item)
-      VALUES (?, ?) `, [u_id, item]      
-    )
+    const results = await query(`
+        INSERT INTO todo (user_id, todo_item)
+        VALUES (?, ?) `, [u_id, item])
 
-    return res.json(results)
+      return res.json(results)
   } catch (e) {
     res.status(500).json({ message: e.message })
   }

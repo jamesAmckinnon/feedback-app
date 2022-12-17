@@ -11,13 +11,13 @@ const handler: NextApiHandler = async (req, res) => {
         .json({ message: '`current_semester` is required' })
     }
 
-    const results = await query(
-      `
-      UPDATE users SET current_semester = ? WHERE users.user_id = ?
-      `, [current_semester_id, userEmail]  
-    )
-    
-    return res.json(results)
+    const results = await query(`
+        UPDATE users
+        SET current_semester = ?
+        WHERE users.user_id = ?
+    `, [current_semester_id, userEmail])
+
+      return res.json(results)
   } catch (e) {
     res.status(500).json({ message: e.message }) 
   }

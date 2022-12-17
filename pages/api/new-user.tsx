@@ -13,13 +13,10 @@ const handler: NextApiHandler = async (req, res) => {
         .json({ message: '`userEmail` required' })
     }
 
-    const results = await query(
-      `
+    const results = await query(`
       INSERT INTO users (user_id)
       VALUES (?)
-      `,
-      [filter.clean(userEmail)]
-    )
+    `, [filter.clean(userEmail)])
 
     return res.json(results)
   } catch (e) {

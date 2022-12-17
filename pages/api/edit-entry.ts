@@ -13,16 +13,14 @@ const handler: NextApiHandler = async (req, res) => {
         .json({ message: '`id`,`title`, and `content` are all required' })
     }
 
-    const results = await query(
-      `
-      UPDATE entries
-      SET title = ?, content = ?
-      WHERE id = ?
-      `,
-      [filter.clean(title), filter.clean(content), id]
-    )
+    const results = await query(`
+        UPDATE entries
+        SET title   = ?,
+            content = ?
+        WHERE id = ?
+    `, [filter.clean(title), filter.clean(content), id])
 
-    return res.json(results)
+      return res.json(results)
   } catch (e) {
     res.status(500).json({ message: e.message })
   }

@@ -11,14 +11,11 @@ const handler: NextApiHandler = async (req, res) => {
         .json({ message: '`grade_weight` is required' })
     }
 
-    const results = await query(
-      `
-      INSERT INTO weight (course_id, grade_weight_type, grade_weight) 
-      VALUES (?, ?, ?) 
-      `, 
-      [course_id, grade_weight_type, grade_weight]
-    )
-    
+    const results = await query(`
+      INSERT INTO weight (course_id, grade_weight_type, grade_weight)
+      VALUES (?, ?, ?)
+    `, [course_id, grade_weight_type, grade_weight])
+
     return res.json(results)
   } catch (e) {
     res.status(500).json({ message: e.message }) 

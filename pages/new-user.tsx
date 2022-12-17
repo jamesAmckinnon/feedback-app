@@ -20,33 +20,33 @@ function NewUser() {
           isNewUser = false
         }
     })
-    console.log("here")
+
     if (isNewUser == true) {
         return ( 
-            <div className="w-full h-full flex items-center">
-                <div>
+            <div className="flex flex-col w-full h-screen flex items-center justify-center">
+                <div className="flex flex-col">
+                    <h1 className="text-xl text-prodigyOrange font-semibold">First Name</h1>
                     <input 
                         id="first_name" 
                         type="text" 
-                        className="border-b border-black mx-5 w-130px pl-2" 
-                        placeholder="First Name"
+                        className="border-b border-black w-200px"
                         maxLength={35} 
                         name="first_name"
                         value={first_name}
                         onChange={ (e) => {setFirstName(e.target.value)}}
                     />
+                    <h1 className="text-xl pt-4 text-prodigyOrange font-semibold">Last Name</h1>
                     <input 
                         id="last_name" 
                         type="text" 
-                        className="border-b border-black mx-5 w-130px pl-2" 
-                        placeholder="Last Name"
+                        className="border-b border-black w-200px"
                         maxLength={35} 
                         name="last_name"
                         value={last_name}
                         onChange={ (e) => {setLastName(e.target.value)}}
                     />
-                    <button onClick={newUser}>
-                        Continue
+                    <button className="flex mt-8 justify-left" onClick={newUser}>
+                        Continue &nbsp;&nbsp;{">"}
                     </button>
                 </div>
             </div>

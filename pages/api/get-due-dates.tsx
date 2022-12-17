@@ -7,13 +7,12 @@ const handler: NextApiHandler = async (req, res) => {
 
   try {
     const results = await query(`
-      SELECT *
-      FROM due_date
-      INNER JOIN course
-      ON due_date.course_id = course.course_id
-      WHERE due_date.semester_id = ${current_semester}`
-      )
-    return res.json(results)
+        SELECT *
+        FROM due_date
+                 INNER JOIN course
+                            ON due_date.course_id = course.course_id
+        WHERE due_date.semester_id = ${current_semester}`)
+      return res.json(results)
   } catch (e) {
     res.status(500).json({ message: e.message })
   }
