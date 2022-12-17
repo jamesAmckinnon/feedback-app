@@ -10,24 +10,32 @@ function Home() {
     const [inp, setInp] = useState("")
 
     useEffect(() => {
-        fetch('https://flask-api.herokuapp.com/api').then(response => {
-            if(response.ok){
-                return response.json()
-            }
-        }).then(data => console.log(data))
+        try{
+            fetch('https://flask-api.herokuapp.com/api').then(response => {
+                if(response.ok){
+                    return response.json()
+                }
+            }).then(data => console.log(data))
+        } catch (e) {
+            return e;
+        }
     },[])
 
     async function handleSubmit(event){
         event.preventDefault()
-        const res = await fetch('https://flask-api.herokuapp.com/api/create', {
-            method: 'POST',
-            body: JSON.stringify({
-                content: inp
+        try {
+            const res = await fetch('https://flask-api.herokuapp.com/api/create', {
+                method: 'POST',
+                body: JSON.stringify({
+                    content: inp
+                })
             })
-        })
-        const json = await res.text()
-        console.log(json)
-        if (!res.ok) throw Error(json.message)
+            const json = await res.text()
+            console.log(json)
+            if (!res.ok) throw Error(json.message)
+        } catch (e) {
+            return e;
+        }
     }
 
 
