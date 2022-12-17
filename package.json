@@ -40,6 +40,6 @@
   "license": "MIT",
   "proxy": "https://prodigy-feedback-app.us.auth0.com/oauth/token",
   "engines": {
-    "node": "6.11.1"
+    "node": "18.12.1"
   }
 }
