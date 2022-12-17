@@ -49,18 +49,6 @@ function NewRequest() {
                         </button>
                     </div>
                 </form>
-                {/*<form onSubmit={handleSubmit}>*/}
-                {/*    <input*/}
-                {/*        id="request_title"*/}
-                {/*        type="text"*/}
-                {/*        className="border-b border-gray-500 w-200px"*/}
-                {/*        maxLength={45}*/}
-                {/*        name="request_title"*/}
-                {/*        value={inp}*/}
-                {/*        onChange={(e) => setInp(e.target.value)}*/}
-                {/*    />*/}
-                {/*    <input type='submit'/>*/}
-                {/*</form>*/}
             </div>
         </div>
     )

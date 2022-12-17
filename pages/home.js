@@ -50,4 +50,4 @@ function Home() {
 
 }
 
-export default NewUser
+export default Home
