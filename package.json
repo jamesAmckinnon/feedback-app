@@ -38,5 +38,8 @@
   "prebuild": "npm run generate-build-meta",
   "generate-build-meta": "./node_modules/react-clear-cache/bin/cli.js",
   "license": "MIT",
-  "proxy": "https://prodigy-feedback-app.us.auth0.com/oauth/token"
+  "proxy": "https://prodigy-feedback-app.us.auth0.com/oauth/token",
+  "engines": {
+    "node": "6.11.1"
+  }
 }
