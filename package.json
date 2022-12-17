@@ -9,7 +9,6 @@
     "migrate": "node scripts/migrate-db.js"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.5",
     "axios": "^0.21.1",
     "bad-words": "^3.0.4",
     "bfg": "^0.3.0",
