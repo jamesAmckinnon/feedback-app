@@ -8,7 +8,7 @@ const handler: NextApiHandler = async (req, res) => {
     const results = await query(`
         SELECT feedback_submission, first_name, last_name
         FROM feedback
-        WHERE feedback.request_id = ?`, request_id)
+        WHERE feedback.request_id = ?`, [request_id])
       return res.json(results)
   } catch (e) {
     res.status(500).json({ message: e.message })

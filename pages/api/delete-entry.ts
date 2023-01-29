@@ -14,7 +14,7 @@ const handler: NextApiHandler = async (req, res) => {
       DELETE
       FROM entries
       WHERE id = ?
-    `, id)
+    `, [id])
     res.json(results)
   } catch (e) {
     res.status(500).json({ message: e.message })

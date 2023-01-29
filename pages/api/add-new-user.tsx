@@ -6,11 +6,11 @@ const handler: NextApiHandler = async (req, res) => {
   
   try {
     const results = await query(`
-        INSERT INTO users (user_id, first_name, last_name)
-        VALUES (?, ?, ?)
+      INSERT INTO users (user_id, first_name, last_name)
+      VALUES (?, ?, ?)
     `, [userEmail, first_name, last_name])
 
-      return res.json(results)
+    return res.json(results)
   } catch (e) {
     res.status(500).json({ message: e.message })
   }

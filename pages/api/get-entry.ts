@@ -14,7 +14,7 @@ const handler: NextApiHandler = async (req, res) => {
       SELECT id, title, content
       FROM entries
       WHERE id = ?
-    `, id)
+    `, [id])
 
     return res.json(results[0])
   } catch (e) {

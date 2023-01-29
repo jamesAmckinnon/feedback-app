@@ -31,7 +31,7 @@ const handler: NextApiHandler = async (req, res) => {
                working_under_pressure,
                written_communication
         FROM areas_for_growth
-        WHERE areas_for_growth.user_id_receive = ?`, userEmail)
+        WHERE areas_for_growth.user_id_receive = ?`, [userEmail])
       return res.json(results)
   } catch (e) {
     res.status(500).json({ message: e.message })
