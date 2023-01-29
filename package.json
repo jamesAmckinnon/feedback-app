@@ -9,7 +9,6 @@
     "migrate": "node scripts/migrate-db.js"
   },
   "dependencies": {
-    "@next-auth/prisma-adapter": "^1.0.5",
     "@prisma/client": "^4.9.0",
     "axios": "^1.2.6",
     "bad-words": "^3.0.4",
