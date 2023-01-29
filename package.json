@@ -8,37 +8,38 @@
     "heroku-postbuild": "npm run build",
     "migrate": "node scripts/migrate-db.js"
   },
+  "engines": {
+    "node": "16.13.1"
+  },
   "dependencies": {
-    "axios": "^1.2.6",
+    "axios": "^0.21.1",
     "bad-words": "^3.0.4",
     "bfg": "^0.3.0",
-    "clsx": "^1.2.1",
+    "clsx": "^1.1.1",
     "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
-    "next": "^13.1.6",
-    "next-auth": "^3.17.2",
-    "next-images": "^1.8.4",
-    "next-svgr": "^0.0.2",
-    "react": "^18.2.0",
-    "react-clear-cache": "^1.4.14",
-    "react-dom": "^18.2.0",
+    "dotenv": "^8.2.0",
+    "next": "^10.2.3",
+    "next-auth": "^3.27.0",
+    "next-images": "^1.8.1",
+    "next-svgr": "0.0.2",
+    "react": "^17.0.1",
+    "react-clear-cache": "^1.4.12",
+    "react-dom": "^17.0.1",
+    "react-loading-skeleton": "^2.1.1",
     "serverless-mysql": "^1.5.4",
-    "swr": "^2.0.3"
+    "swr": "^0.3.9"
   },
   "devDependencies": {
-    "@types/jquery": "^3.5.16",
-    "@types/node": "^18.11.18",
-    "@types/react": "^18.0.27",
-    "postcss-flexbugs-fixes": "^5.0.2",
-    "postcss-preset-env": "^8.0.1",
-    "tailwindcss": "^3.2.4",
-    "typescript": "^4.9.4"
+    "@types/jquery": "^3.5.6",
+    "@types/node": "^14.14.6",
+    "@types/react": "^16.9.55",
+    "postcss-flexbugs-fixes": "4.2.1",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "^1.7.4",
+    "typescript": "^4.0.5"
   },
   "prebuild": "npm run generate-build-meta",
   "generate-build-meta": "./node_modules/react-clear-cache/bin/cli.js",
   "license": "MIT",
-  "proxy": "https://prodigy-feedback-app.us.auth0.com/oauth/token",
-  "engines": {
-    "node": "18.12.1"
-  }
+  "proxy": "https://prodigy-feedback-app.us.auth0.com/oauth/token"
 }
