@@ -46,8 +46,8 @@ function Feedback(name) {
                 </div>
                 {feedbackRequests.map((f) => (
                     <div className="flex flex-row w-full pt-6" id={f.request_id}>
-                        <Link href={{pathname: '/profile/view-feedback', query: {object: JSON.stringify(f)}}}>
-                            <div className="flex w-full justify-between text-lg cursor-pointer  border-b text-prodigyOrange font-bold">
+                        <Link className="w-full" href={{pathname: '/profile/view-feedback', query: {object: JSON.stringify(f)}}}>
+                            <div className="flex w-full justify-between text-lg cursor-pointer border-customGrey6 border-b text-prodigyOrange font-bold">
                                 {f.request_title}
                                 <h3 className="text-customGrey2 pr-2 font-light">{'>'}</h3>
                             </div>

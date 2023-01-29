@@ -20,7 +20,7 @@ function Seeking(user_id) {
           {feedbackRequests.map((u) => (
               <>
               <Link href={{ pathname: '/give-feedback/submit-feedback', query: { object: JSON.stringify(Object.assign(u, {user_id:user_id.user_id})) } }}>
-                <div className="flex justify-between text-lg cursor-pointer pt-6 border-b text-prodigyOrange font-bold">
+                <div className="flex justify-between text-lg cursor-pointer pt-6 border-b border-customGrey6 text-prodigyOrange font-bold">
                   {u.request_title}
                   <h3 className="text-customGrey2 pr-2 font-light">{'>'}</h3>
                 </div>

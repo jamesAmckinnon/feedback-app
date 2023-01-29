@@ -29,7 +29,7 @@ function SelectUser() {
                     if (u.user_id != userEmail) {
                     return (
                             <Link href={{pathname: '/give-feedback/user', query: {user_id: JSON.stringify(u.user_id)}}}>
-                                <div className="flex justify-between cursor-pointer pt-6 border-b text-prodigyOrange font-bold">
+                                <div className="flex justify-between cursor-pointer pt-6 border-b border-customGrey6 text-prodigyOrange font-bold">
                                     <h3> {u.first_name} {u.last_name} </h3>
                                     <h3 className="text-customGrey2 pr-2 font-light">
                                         {">"}

@@ -5,6 +5,7 @@ import {useSession} from "next-auth/client";
 import {useGrowthAreasProfile} from '@/lib/swr-hooks'
 
 function AreasForGrowth( ) {
+    // @ts-ignore
     const [session] = useSession();
     const userEmail = session?.user?.email;
     const { growth_areas: growth_areas, isLoading: isLoading, isError: isError }  = useGrowthAreasProfile(userEmail);
